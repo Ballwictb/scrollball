@@ -14,6 +14,5 @@
   [![GitHub Tag](https://img.shields.io/github/v/tag/Ballwictb/scrollball)](https://github.com/Ballwictb/scrollball/releases/tag/v1.0.0)
   ![GitHub License](https://img.shields.io/github/license/Ballwictb/scrollball)
 
-
-  
 </div>
+
