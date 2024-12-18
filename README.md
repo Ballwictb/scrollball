@@ -11,6 +11,7 @@
 <div align="center">
 
   ![Netlify Status](https://api.netlify.com/api/v1/badges/352a8473-2da3-4dab-a65f-d7d97e320e05/deploy-status)
+  ![GitHub License](https://img.shields.io/github/license/Ballwictb/scrollball)
 
 
   
