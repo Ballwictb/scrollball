@@ -4,6 +4,8 @@
   
 </div>
 
-<h1 align="center"> ScrollBall </h1>
+<h1 align="center"><b>ScrollBall</b></h1>
 
-Sencillo editor de barras de desplazamiento CSS.
+<p align="center"><b>Sencilla herramienta en línea para diseñar barras de desplazamiento.</b></p>
+
+
