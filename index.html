@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollBall</title>
+    <meta name="description" content="Sencillo editor de barras de desplazamiento CSS." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="ballwictb.github.io/scrollball/" />
+    <meta property="twitter:url" content="https://ballwictb.github.io/scrollball/" />
+    <meta name="twitter:title" content="ScrollBall" />
+    <meta name="twitter:description" content="Sencillo editor de barras de desplazamiento CSS." />
+    <meta name="twitter:image" content="https://github.com/Ballwictb/scrollball" />
+    <meta property="og:title" content="ScrollBall" />
+    <meta property="og:url" content="https://ballwictb.github.io/scrollball/" />
+    <meta property="og:image" content="https://github.com/Ballwictb/scrollball" />
+    <meta property="og:description" content="Sencillo editor de barras de desplazamiento CSS." />
+    <link rel="stylesheet" href="./assets/code/style.css">
+    <link rel="stylesheet" href="./assets/code/language-switcher.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/logo_blanco.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo_blanco.png" type="image/png">
+    <link href="./assets/logo_blanco.png" rel="apple-touch-icon" sizes="180x180" />
+    <link rel="stylesheet" href="./assets/code/confgS_1.23.0.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ballwictb/font-awesome-six@main/six-rp/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+</head>
+
+<body>
+    <div class="modal">
+        <h4>Código copiado!!</h4>
+    </div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./assets/logo.webp" alt="logo">
+                <h1><span style="text-decoration: underline;">S</span>croll<span
+                        style="text-decoration: underline;">B</span>all</h1>
+            </div>
+
+            <div class="social-container">
+                <div class="marker">
+                    <img src="./assets/marcador_blanco.png" alt="Marker" class="marker-image">
+                    <div class="social-links">
+                        <a href="https://github.com/Ballwictb/scrollball" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://privacidad.me/@ballwictb" target="_blank" class="social-link">
+                            <i class="fa fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <select id="languageSelect">
+                        <option value="es"> Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <button id="themeToggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-moon hide">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun hide">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="customizer">
+                <h2>Personaliza tu Scrollbar</h2>
+                <div class="color-pickers">
+                    <div class="input-group">
+                        <label for="thumbColor">Color del Thumb</label>
+                        <div class="color-input">
+                            <input type="color" id="thumbColor" value="#6366f1">
+                            <input type="text" id="thumbColorText" value="#6366f1">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="trackColor">Color del Track</label>
+                        <div class="color-input">
+                            <input type="color" id="trackColor" value="#e2e8f0">
+                            <input type="text" id="trackColorText" value="#e2e8f0">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="scrollbarWidth">Ancho del Scrollbar</label>
+                    <div class="range-input">
+                        <input type="range" id="scrollbarWidth" min="5" max="50" value="12">
+                        <span id="widthValue">12px</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="scrollbarRadius">Radio de borde</label>
+                    <div class="range-input">
+                        <input type="range" id="scrollbarRadius" min="0" max="50" value="6">
+                        <span id="radiusValue">6px</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="selectM">Ancho del Scrollbar (Firefox)</label>
+                    <div class="select-moz">
+                        <select name="selectM" id="selectM">
+                            <option value="auto">auto</option>
+                            <option value="thin">thin</option>
+                            <option value="none">none</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="preview">
+                <h2>Vista previa</h2>
+                <div class="preview-content" id="previewContent">
+                    <img src="./assets/logo.webp" alt="logo-preview">
+                </div>
+            </section>
+        </main>
+        <section class="code-output">
+            <section>
+                <h2>Código CSS generado</h2>
+                <button id="copyButton">
+                    <i data-feather="clipboard"></i>
+                    <span>Copiar código</span>
+                </button>
+            </section>
+            <pre><code class="language-css" id="cssOutput"></code></pre>
+        </section>
+    </div>
+    <script src="./assets/code/script.js"></script>
+    <script src="./assets/code/language-switcher.js"></script>
+    <script src="./assets/code/confg_1.23.0.js"></script>
+    <script src="./assets/code/css.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+</body>
+
+</html>
