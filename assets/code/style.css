@@ -8,11 +8,6 @@
     --code-bg: #2d3748;
     --code-text: #e2e8f0;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --track-color: #ffe97f;
-    --thumb-color: #e76e55;
-    --scrollbar-width: 16px;
-    --scrollbar-radius: 0px;
-    --scrollbar-width-moz: thin;
 }
 
 .dark-mode {
@@ -42,27 +37,17 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Chrome, Edge, Safari */
 body::-webkit-scrollbar {
-    width: var(--scrollbar-width);
+    width: 14px;
 }
-        
+
 body::-webkit-scrollbar-thumb {
-    background-color: var(--thumb-color);
-    border-radius: var(--scrollbar-radius);
+    background: var(--bg-color);
+    border: 0.5px solid var(--border-color);
 }
-        
+
 body::-webkit-scrollbar-track {
-    background-color: var(--track-color);
-}
-
-
-/* Firefox */
-@supports not selector(::-webkit-scrollbar) {
-* {
-    scrollbar-width: var(--scrollbar-width-moz);
-    scrollbar-color: var(--thumb-color) var(--track-color);
-  }
+    background-color: var(--text-color);
 }
 
 .container {
